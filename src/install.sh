@@ -3,7 +3,7 @@
 echo "Installing Git..."
 
 # Check if Git is already installed on the machine
-if [ "$(git --version > /dev/null 2>&1)" != 0 ]; then 
+if [ "$(git --version > /dev/null 2>&1)" == 0 ]; then 
 
 	echo "OK, performing installation..."
 
