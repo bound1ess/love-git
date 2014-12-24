@@ -2,12 +2,16 @@
 
 echo "Checking that user data is set properly..."
 
-#if [ ]; then
+# name
+if [ ! -z "$(git config --get user.name)" ]; then
 
-#	echo "Seems pretty good!"
+	echo "Name is set."
 
-#else
+fi
 
-#	echo "Apparently, the user data is not set correctly."
+# email
+if [ ! -z "$(git config --get user.email)" ]; then
 
-#fi
+	echo "Email is set."
+
+fi
