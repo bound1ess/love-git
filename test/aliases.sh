@@ -2,6 +2,11 @@
 
 echo "Testing added aliases..."
 
+# workaround to a known bug/unexpected behavior
+echo "Please specify the shell congfiguration file path: "
+read CONFIG_PATH
+source "$CONFIG_PATH"
+
 alias_exists() {
 	if  (($(alias | grep "$1=" | wc -l) == 0)); then
 		echo "Alias $1 is not set."

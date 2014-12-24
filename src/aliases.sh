@@ -7,7 +7,7 @@ echo "Please specify the shell configuration file path: "
 if [ "$USER" != "vagrant" ]; then
 	read CONFIG_PATH
 else
-	: CONFIG_PATH="~/.bashrc"
+	: CONFIG_PATH="/home/$USER/.bashrc"
 fi
 
 # more to be added
