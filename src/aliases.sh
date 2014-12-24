@@ -3,7 +3,12 @@
 echo "Adding aliases..."
 
 echo "Please specify the shell configuration file path: "
-read CONFIG_PATH
+
+if [ "$USER" != "vagrant" ]; then
+	read CONFIG_PATH
+else
+	CONFIG_PATH="~/.bashrc"
+fi
 
 # more to be added
 cat "alias gi=\"git init\"" >> "$CONFIG_PATH"
