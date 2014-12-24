@@ -13,6 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/trusty64"
 
   # Sync two folders.
+  # This will actually screw up the "ssh" command, but whatever
   config.vm.synced_folder ".", "/home/vagrant"
 
   # Disable automatic box update checking. If you disable this, then

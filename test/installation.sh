@@ -2,7 +2,7 @@
 
 echo "Testing Git installation..."
 
-if [ "$(git --version > /dev/null 2>&1)" != 0 ]; then 
+if hash git 2>/dev/null; then 
 
 	echo "Looks like Git was successfully installed!"
 	git --version
