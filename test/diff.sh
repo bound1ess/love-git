@@ -2,7 +2,7 @@
 
 echo "Testing external diff viewers..."
 
-PY_SCRIPT="~/external_diff_viewer.py"
+: PY_SCRIPT="~/external_diff_viewer.py"
 
 if [ -f "$PY_SCRIPT" ] && [ $(git config --get diff.external) == "$PY_SCRIPT" ]; then
 

@@ -2,9 +2,9 @@
 
 echo "Configuring an external diff viewer..."
 
-PY_SCRIPT="~/external_diff_viewer.py"
+: PY_SCRIPT="~/external_diff_viewer.py"
 
-TEMPLATE="
+: TEMPLATE="
 #!/usr/bin/env python3
 from subprocess import Popen
 from sys import argv
