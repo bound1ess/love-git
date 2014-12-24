@@ -2,19 +2,16 @@
 
 echo "Configuring an external diff viewer..."
 
-: PY_SCRIPT="/home/$USER/external_diff_viewer.py"
+PY_SCRIPT="/home/$USER/external_diff_viewer.py"
 
-: TEMPLATE="
-#!/usr/bin/env python3
+TEMPLATE="#!/usr/bin/env python3
 from subprocess import Popen
 from sys import argv
 
 # By default, it is configured to use Meld as the diff viewer of choice.
-Popen([\"meld\", argv[2], argv[5]]).wait()
-"
+Popen([\"meld\", argv[2], argv[5]]).wait()"
 
-# what is wrong with that?
-cat "$TEMPLATE" >> "$PY_SCRIPT"
+echo "$TEMPLATE" >> "$PY_SCRIPT"
 
 git config --global diff.external "$PY_SCRIPT"
 

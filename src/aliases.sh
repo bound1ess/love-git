@@ -11,10 +11,10 @@ else
 fi
 
 # more to be added
-cat "alias gi=\"git init\"" >> "$CONFIG_PATH"
-cat "alias ga=\"git add\"" >> "$CONFIG_PATH"
-cat "alias gs=\"git status\"" >> "$CONFIG_PATH"
-cat "alias gc=\"git commit\"" >> "$CONFIG_PATH"
-cat "alias gp=\"git push\"" >> "$CONFIG_PATH" 
+echo "alias gi=\"git init\"" >> "$CONFIG_PATH"
+echo "alias ga=\"git add\"" >> "$CONFIG_PATH"
+echo "alias gs=\"git status\"" >> "$CONFIG_PATH"
+echo "alias gc=\"git commit\"" >> "$CONFIG_PATH"
+echo "alias gp=\"git push\"" >> "$CONFIG_PATH" 
 
 echo "Aliases were added to $CONFIG_PATH!"
