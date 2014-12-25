@@ -2,8 +2,15 @@
 
 echo "Creating an SSH key and/or enabling HTTPS cache helper..."
 
+: VAGRANT_VM=[ "$USER" == "vagrant" ]
+
 echo "Do you want to enable HTTPS credentials caching? [Y/N]: "
-read ANSWER
+
+if [ "$VAGRANT_VM" == 1 ]; then
+	ANSWER="y"
+else
+	read ANSWER
+fi
 
 if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ]; then
 	
@@ -13,12 +20,22 @@ if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ]; then
 fi
 
 echo "Do you want to create an SSH key? [Y/N]: "
-read ANSWER
+
+if [ "$VAGRANT_VM" == 1 ]; then	
+	ANSWER="y"
+else
+	read ANSWER
+fi
 
 if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ]; then
 
 	echo "Please enter your email: "
-	read EMAIL
+	
+	if [ "$VAGRANT_VM" == 1 ]; then
+		EMAIL="vagrant@vagrant.com"
+	else
+		read EMAIL
+	fi
 
 	ssh-keygen -t rsa -C "$EMAIL"
 	eval "$(ssh-agent -s)"

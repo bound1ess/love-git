@@ -2,7 +2,7 @@
 
 # easiest way to detect Vagrant environment
 # : is actually a built-in
-: VAGRANT_VM=[ "$USER" == "vagrant" ];
+: VAGRANT_VM=[ "$USER" == "vagrant" ]
 
 echo "Setting up user data..."
 
@@ -10,7 +10,7 @@ echo "Setting up user data..."
 echo "Please enter your name [John Doe]: "
 
 if [ "$VAGRANT_VM" == 1 ]; then 
-	: NAME="vagrant"
+	NAME="vagrant"
 else 
 	read NAME
 fi
@@ -21,7 +21,7 @@ git config --global user.name "$NAME"
 echo "Please enter your email [johndoe@example.com]: "
 
 if [ "$VAGRANT_VM" == 1 ]; then
-	: EMAIL="vagrant@vagrant.com"
+	EMAIL="vagrant@vagrant.com"
 else 
 	read EMAIL
 fi
