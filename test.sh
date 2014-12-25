@@ -2,7 +2,11 @@
 
 echo "Running tests..."
 
-cd ./test/
+if [ $(hostname) == "vagrant" ]; then
+	cd /vagrant/test/
+else
+	cd test/
+fi
 
 source installation.sh
 source aliases.sh

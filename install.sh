@@ -2,7 +2,11 @@
 
 echo "Installing and configuring Git..."
 
-cd ./src/
+if [ $(hostname) == "vagrant" ]; then
+	cd /vagrant/src/
+else
+	cd src/
+fi
 
 source install.sh
 source aliases.sh

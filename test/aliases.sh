@@ -4,7 +4,14 @@ echo "Testing added aliases..."
 
 # workaround to a known bug/unexpected behavior
 echo "Please specify the shell congfiguration file path: "
-read CONFIG_PATH
+
+if [ $(hostname) == "vagrant" ]; then
+	CONFIG_PATH="/home/vagrant/.bash_aliases"
+else
+	read CONFIG_PATH
+fi
+
+echo "Sourcing $CONFIG_PATH..."
 source "$CONFIG_PATH"
 
 alias_exists() {

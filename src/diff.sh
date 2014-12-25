@@ -2,7 +2,11 @@
 
 echo "Configuring an external diff viewer..."
 
-PY_SCRIPT="/home/$USER/external_diff_viewer.py"
+if [ $(hostname) == "vagrant" ]; then
+	PY_SCRIPT="/home/vagrant/external_diff_viewer.py"
+else
+	PY_SCRIPT="/home/$USER/external_diff_viewer.py"
+fi
 
 TEMPLATE="#!/usr/bin/env python3
 from subprocess import Popen

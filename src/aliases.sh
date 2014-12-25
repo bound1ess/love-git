@@ -4,10 +4,10 @@ echo "Adding aliases..."
 
 echo "Please specify the shell configuration file path: "
 
-if [ "$USER" != "vagrant" ]; then
+if [ $(hostname) != "vagrant" ]; then
 	read CONFIG_PATH
 else
-	CONFIG_PATH="/home/$USER/.bashrc"
+	CONFIG_PATH="/home/vagrant/.bash_aliases"
 fi
 
 # more to be added

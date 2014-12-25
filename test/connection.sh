@@ -2,7 +2,7 @@
 
 echo "Checking that SSH key is set or/and HTTPS cache helper is enabled..."
 
-if [ $(git config --get credential.helper) == "cache" ]; then
+if [ "$(git config --get credential.helper)" == "cache" ]; then
 
 	echo "HTTPS credentials caching helper is enabled."
 

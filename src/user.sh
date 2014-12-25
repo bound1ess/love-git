@@ -2,7 +2,7 @@
 
 # easiest way to detect Vagrant environment
 # : is actually a built-in
-: VAGRANT_VM=[ "$USER" == "vagrant" ]
+: VAGRANT_VM=[ $(hostname) == "vagrant" ]
 
 echo "Setting up user data..."
 
