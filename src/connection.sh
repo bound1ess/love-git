@@ -7,9 +7,9 @@ echo "Creating an SSH key and/or enabling HTTPS cache helper..."
 echo "Do you want to enable HTTPS credentials caching? [Y/N]: "
 
 if [ "$VAGRANT_VM" == 1 ]; then
-	ANSWER="y"
-else
 	read ANSWER
+else
+	ANSWER="y"
 fi
 
 if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ]; then
@@ -22,9 +22,9 @@ fi
 echo "Do you want to create an SSH key? [Y/N]: "
 
 if [ "$VAGRANT_VM" == 1 ]; then	
-	ANSWER="n"
-else
 	read ANSWER
+else
+	ANSWER="n"
 fi
 
 if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ]; then
