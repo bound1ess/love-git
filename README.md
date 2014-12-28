@@ -5,7 +5,7 @@ All of this was created and tested with the help of excellent `Vagrant` project.
 ```shell
 git clone https://github.com/bound1ess/love-git.git && cd love-git
 ./install.sh && ./test.sh
-./vagrant.py # If you are curious ^_^
+./vagrant.sh # If you are curious ^_^
 ```
 
 ## What It Does
