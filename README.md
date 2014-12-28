@@ -12,7 +12,7 @@ git clone https://github.com/bound1ess/love-git.git && cd love-git
 
 - Installs `git` package.
 - Adds 5 handy aliases to your `.bashrc` (or `.zshrc`, whatever).
-- Helps you create an SSH key (if you do not have one) or enable the cache helper if you use HTTPS.
+- Helps you create an SSH key (if you do not have one) or enable the cache helper if you use HTTPS (for `86400` seconds = `1 day`).
 - Helps you configure an external diff viewer.
 - Helps you add your email and name to the global Git config.
 

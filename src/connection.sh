@@ -14,7 +14,7 @@ fi
 
 if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ]; then
 	
-	git config --global credential.helper cache
+	git config --global credential.helper "cache --timeout=86400"
 	echo "Set!"
 
 fi
@@ -35,5 +35,6 @@ if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ]; then
 	ssh-keygen -t rsa -C "$EMAIL"
 	eval "$(ssh-agent -s)"
 	ssh-add ~/.ssh/id_rsa # may not always work
+	echo "Set!"
 
 fi
